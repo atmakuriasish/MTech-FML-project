@@ -14,7 +14,7 @@ class DecisionTreeClassifier:
         unique_classes, class_counts = np.unique(y, return_counts=True)
 
         if (len(unique_classes) == 1) or (depth == self.max_depth) or (n_samples < self.min_samples_split):
-            # If all samples have the same class or the tree depth limit is reached,
+            # If all samples have the same class or the tree depth limit is reached, or node has less than minimum samples
             # create a leaf node with the most common class
             return unique_classes[np.argmax(class_counts)]
 
