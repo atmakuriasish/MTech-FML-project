@@ -72,7 +72,7 @@ class DecisionTreeClassifier:
         return np.array([self._predict_tree(x, self.tree) for x in X])
 
     def _predict_tree(self, x, tree):
-        if isinstance(tree, np.int64):
+        if isinstance(tree, np.int32):
             return tree
         feature_index, threshold, left_tree, right_tree = tree["feature_index"], tree["threshold"], tree["left"], tree["right"]
         if x[feature_index] <= threshold:
