@@ -1,4 +1,4 @@
-# MTech-FML-Project
+# Custom Boosting Algorithms: A Comparative Study
 
 ## Introduction
 
